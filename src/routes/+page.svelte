@@ -14,27 +14,28 @@
   <section class="bg-white border border-slate-200 rounded-lg p-6 shadow-sm">
     <h2 class="text-xl font-bold text-slate-800 mb-4">New Transaction</h2>
 
-    <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <form method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4">
       <div>
-        <label class="block text-sm font-medium text-slate-700 mb-1">Date</label>
-        <input type="date" class="border border-slate-300 rounded px-3 py-2 w-full" />
+        <label for="date" class="block text-sm font-medium text-slate-700 mb-1">Date</label>
+        <input id="date" name="date" type="date" required
+               class="border border-slate-300 rounded px-3 py-2 w-full" />
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-slate-700 mb-1">Amount</label>
-        <input type="number" step="0.01" placeholder="0.00"
+        <label for="amount" class="block text-sm font-medium text-slate-700 mb-1">Amount</label>
+        <input id="amount" name="amount" type="number" step="0.01" placeholder="0.00" required
                class="border border-slate-300 rounded px-3 py-2 w-full" />
       </div>
 
       <div class="md:col-span-2">
-        <label class="block text-sm font-medium text-slate-700 mb-1">Description</label>
-        <input type="text" placeholder="e.g. Office rent for July"
+        <label for="description" class="block text-sm font-medium text-slate-700 mb-1">Description</label>
+        <input id="description" name="description" type="text" placeholder="e.g. Office rent for July" required
                class="border border-slate-300 rounded px-3 py-2 w-full" />
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-slate-700 mb-1">Debit Account</label>
-        <select class="border border-slate-300 rounded px-3 py-2 w-full">
+        <label for="debit" class="block text-sm font-medium text-slate-700 mb-1">Debit Account</label>
+        <select id="debit" name="debit" required class="border border-slate-300 rounded px-3 py-2 w-full">
           <option value="">-- Select --</option>
           <option>Cash</option>
           <option>Accounts Receivable</option>
@@ -46,8 +47,8 @@
       </div>
 
       <div>
-        <label class="block text-sm font-medium text-slate-700 mb-1">Credit Account</label>
-        <select class="border border-slate-300 rounded px-3 py-2 w-full">
+        <label for="credit" class="block text-sm font-medium text-slate-700 mb-1">Credit Account</label>
+        <select id="credit" name="credit" required class="border border-slate-300 rounded px-3 py-2 w-full">
           <option value="">-- Select --</option>
           <option>Cash</option>
           <option>Accounts Receivable</option>
